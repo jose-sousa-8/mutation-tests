@@ -1,0 +1,25 @@
+{
+	"stryker-config": {
+		"reporters": [
+			"progress",
+			"html",
+			"cleartext"
+		],
+		"additional-timeout": 1000,
+		"project": "Tests.Calculator.csproj",
+		"test-projects": [ "./Tests.Calculator.csproj" ],
+		"concurrency": 4,
+		"thresholds": {
+			"high": 80,
+			"low": 70,
+			"break": 0
+		},
+		"mutation-level": "Complete",
+		"ignore-mutations": [ "string", "logical" ],
+		"ignore-methods": [
+			"*ConfigureAwait*",
+			"ToString",
+			"*HashCode*"
+		]
+	}
+}
